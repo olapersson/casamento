@@ -3,3 +3,21 @@ p {
   line-height: 23px;
   margin-bottom: 23px;
 }
+
+.content p a {
+  color: $green;
+
+  &:hover {
+    background-color: tint($green, 90%);
+    @include border-radius(4px);
+    padding: 0 2px;
+    margin: 0 -2px;
+  }
+
+}
+
+.wf-loading {
+  p, a, h1, h2, h3, h4, h5, li, span {
+    color: transparent !important;
+  }
+}
