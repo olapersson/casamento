@@ -1,0 +1,35 @@
+.boat {
+  @include background-2x("boat");
+  background-position: 3px 0;
+
+  padding: 2px 31px 0;
+}
+
+.program {
+  line-height: 23px;
+  margin-bottom: 45px;
+
+  >div {
+    padding: 41px 0 0 45px;
+    margin-top: -40px;
+ }
+
+  .p-a-min {
+    margin-top: 0;
+    @include background-2x("circle-a-min");
+    padding-top: 1px;
+  }
+
+  .p-a {
+    @include background-2x("circle-a");
+  }
+
+  .p-b {
+    @include background-2x("circle-b");
+  }
+
+  .p-c {
+    @include background-2x("circle-c");
+  }
+
+}

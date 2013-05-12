@@ -1,0 +1,53 @@
+#map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: -1px;
+  padding: 1px;
+  box-sizing: content-box;
+
+  -webkit-mask-image: url('/images/ellipse.png');
+  -webkit-mask-position: 50% 50%;
+  -webkit-mask-size: 100% 100%;
+
+}
+.mapwrap {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+
+  border: 2px dotted $black;
+  @include border-radius(500px);
+  position: relative;
+  margin-bottom: 40px;
+
+  &:after, &:before {
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    color: $white;
+    @include serif;
+    padding: 3px 5px 2px 4px;
+    z-index: 90;
+    left: 50%;
+    margin-left: -8px;
+    border: 1px solid $white;
+    font-weight: $serif-bold;
+    text-align: center;
+  }
+
+  &:after {
+    bottom: -12px;
+    content: "S";
+    color: $black;
+    border-color: $black;
+    background-color: $white;
+  }
+
+  &:before {
+    background-color: $black;
+    content: "N";
+    top: -12px;
+  }
+
+}

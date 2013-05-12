@@ -1,0 +1,29 @@
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  height: 100%;
+  @media (min-device-width : 768px) {
+    min-height: 600px;
+  }
+}
+
+body {
+  background: $white;
+  color: $black;
+
+  @include sans-serif;
+}
+
+.content {
+  padding-bottom: 45px;
+  margin: 0 20px;
+
+  @media (min-width : 485px) {
+    margin: 0 auto;
+    max-width: 445px;
+  }
+
+}
+

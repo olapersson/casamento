@@ -19,7 +19,8 @@ module Jekyll
     safe true
 
     def generate(site)
-      Dir.chdir File.expand_path('../_sass', File.dirname(__FILE__)) do
+      Dir.chdir File.expand_path('../_scss', File.dirname(__FILE__)) do
+        FileUtils.cp_r "images/", "../_site/images"
         Compass::Exec::SubCommandUI.new(%w(compile)).run!
       end
     end

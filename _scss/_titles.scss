@@ -1,0 +1,49 @@
+h1.home_title {
+  text-align: center;
+  color: $black;
+  padding-top: 2px;
+
+  span {
+    @include background-2x("linha", "true");
+    @include inline-block;
+    margin: -2px -7px 0 -4px;
+
+  }
+
+}
+
+h1,h2,h3 {
+  @include serif;
+  color: $green;
+  font-size: 24px;
+  margin: 15px 0 23px;
+
+  small {
+    color: $black;
+    @include sans-serif;
+    font-size: 12px;
+    display: block;
+    font-style: normal;
+    margin: 8px 0 0;
+  }
+
+}
+
+h4, h5 {
+  @include sans-serif;
+  font-size: 15px;
+  font-weight: $sans-bold;
+  line-height: 23px;
+}
+
+h4 {
+  text-decoration: underline;
+  color: $green;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 31px;
+  color: $black;
+  margin: 11px auto 55px;
+}

@@ -1,0 +1,71 @@
+.menu {
+  min-height: 45px;
+  background-color: $light-grey;
+  border-bottom: 1px dotted $border-color;
+  margin-bottom: 13px;
+}
+
+.intro .intro,
+.convite .convite,
+.viagem .viagem,
+.agenda .agenda,
+.festival .festival {
+  background-color: shade($light-grey, 10%);
+}
+
+.menu {
+  @include clearfix;
+  width: 100%;
+
+  li {
+
+    border-top: 1px dotted $black;
+
+    &:last-child {
+      border-right: 1px dotted $black;
+
+    }
+
+    &.closed span {
+      @include background-2x("seta");
+      background-position: 98% 50%;
+    }
+
+    span {
+      @include background-2x("seta-close");
+      background-position: 98% 50%;
+    }
+
+    a, span {
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 14px;
+      display: block;
+      color: $black;
+
+      &:hover {
+        color: $green;
+      }
+
+    }
+
+    @media (min-width : 768px) {
+      width: 20%;
+      float:left;
+      border-left: 1px dotted $black;
+      border-top: none;
+      text-align: center;
+
+      a {
+        font-size: 13px;
+        padding: 16px 0;
+      }
+
+      &.title {
+        display: none;
+      }
+    }
+
+  }
+
+}

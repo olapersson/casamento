@@ -1,0 +1,18 @@
+.link-top {
+  text-align: right;
+
+  a {
+    @include inline-block;
+    @include background-2x("seta-up");
+    background-position: 0 50%;
+    padding-left: 13px;
+    color: $green;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+}

@@ -1,0 +1,22 @@
+nav.internal {
+
+  margin-bottom: 33px;
+
+  li {
+    border-top: 1px dotted $black;
+
+    &:last-child {
+      border-bottom: 1px dotted $black;
+    }
+
+    a {
+      color: $green;
+      text-decoration: none;
+
+      display: block;
+      padding: 16px 12px;
+    }
+
+  }
+
+}

@@ -1,0 +1,18 @@
+$sans-serif: "ff-basic-gothic-web-pro";
+$sans-regular: 300;
+$sans-bold: 500;
+
+$serif: "adobe-garamond-pro";
+$serif-regular: 400;
+$serif-bold: 700;
+
+@mixin serif() {
+  font-family: $serif, Georgia, serif;
+  font-weight: $serif-regular;
+  font-style: italic;
+}
+
+@mixin sans-serif() {
+  font-family: $sans-serif, Helvetica, Arial, serif;
+  font-weight: $sans-regular;
+}
