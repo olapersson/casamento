@@ -4,6 +4,10 @@ p {
   margin-bottom: 23px;
 }
 
+strong {
+  font-weight: $sans-bold;
+}
+
 .content p a {
   color: $green;
 
