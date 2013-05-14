@@ -27,28 +27,28 @@ function initMap() {
   }, {
     "featureType": "road",
   "stylers": [{
-    "visibility": "off"
+    "visibility": "simplified"
   }, {
     "color": "#ffffff"
   }]
   }, {
     "featureType": "road.arterial",
   "stylers": [{
-    "visibility": "off"
+    "visibility": "simplified"
   }, {
-    "color": "#fee379"
+    "color": "#e7e7e7"
   }]
   }, {
     "featureType": "road.highway",
     "stylers": [{
-      "visibility": "on"
+      "visibility": "simplified"
     }, {
-      "color": "#dddddd"
+      "color": "#e3e3e3"
     }]
   }, {
     "featureType": "landscape",
     "stylers": [{
-      "visibility": "on"
+      "visibility": "simplified"
     }, {
       "color": "#f3f4f4"
     }]
@@ -100,19 +100,23 @@ function initMap() {
   });
 
   var image = {
-    url: '/images/marker-a.png',
+    url: '/images/marker-a2x.png',
+    size: new google.maps.Size(22, 43),
+    scaledSize: new google.maps.Size(22, 43),
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(12, 42)
   };
 
   var shadow = {
-    url: '/images/marker-shadow.png',
+    url: '/images/marker-shadow2x.png',
+    size: new google.maps.Size(68, 74),
+    scaledSize: new google.maps.Size(34, 37),
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(5, 35)
   };
 
-  var markerB = $.extend({}, image, { url: '/images/marker-b.png' }),
-      markerC = $.extend({}, image, { url: '/images/marker-c.png' });
+  var markerB = $.extend({}, image, { url: '/images/marker-b2x.png' }),
+      markerC = $.extend({}, image, { url: '/images/marker-c2x.png' });
 
   var lillaBommen = new google.maps.Marker({
     position: lillaBommenPosition,
