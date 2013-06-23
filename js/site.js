@@ -144,9 +144,9 @@ function initMap() {
 
 var menu = {
 
-  toggle: $(".menu .title"),
+  toggle: $(".page_nav .title"),
 
-  menu: $(".menu li").not(".title"),
+  menu: $(".page_nav li").not(".title"),
 
   init: function() {
     this.setInitialStatus();
@@ -176,11 +176,42 @@ var menu = {
   }
 
 }
+var lang = {
+
+  langToggle: $(".lang_nav .title"),
+
+  menuContainer: $(".lang_nav"),
+
+  langItem: $(".lang_nav li").not(".title"),
+
+  init: function() {
+    this.langToggle.on("click", $.proxy(this.toggleLangMenu, this));
+    $("html").on("click", $.proxy(this.closeLang, this));
+  },
+
+  toggleLangMenu: function(e) {
+    e.stopPropagation();
+    (this.menuContainer.hasClass("closed")) ?
+      this.openLang() : this.closeLang();
+  },
+
+  closeLang: function() {
+    this.langItem.hide();
+    this.menuContainer.addClass("closed");
+  },
+
+  openLang: function() {
+    this.langItem.show();
+    this.menuContainer.removeClass("closed");
+  }
+
+}
 
 
 //Init stuff
 jQuery(document).ready(function () {
   initMap();
   menu.init();
+  lang.init();
 });
 

@@ -1,6 +1,6 @@
-@mixin background-2x($background, $force_size: "false", $file: 'png'){
-  $image: #{$background+"."+$file};
-  $image2x: #{$background+"2x."+$file};
+@mixin background-2x($background, $force_size: "false", $file: "png"){
+  $image: #{$background + "." + $file};
+  $image2x: #{$background + "2x." + $file};
 
   background: image-url($image) no-repeat;
 
