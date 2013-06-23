@@ -115,8 +115,8 @@ function initMap() {
     anchor: new google.maps.Point(5, 35)
   };
 
-  var markerB = $.extend({}, image, { url: '/images/marker-b2x.png' }),
-      markerC = $.extend({}, image, { url: '/images/marker-c2x.png' });
+  var markerB = $.extend({}, image, { url: '/images/marker-b2x.png' });
+      /*markerC = $.extend({}, image, { url: '/images/marker-c2x.png' });*/
 
   var lillaBommen = new google.maps.Marker({
     position: lillaBommenPosition,
@@ -132,12 +132,13 @@ function initMap() {
       shadow: shadow
   });
 
+  /*
   var botto = new google.maps.Marker({
     position: bottoPosition,
       map: map,
       icon: markerC,
       shadow: shadow
-  });
+  });*/
 
 
 }
