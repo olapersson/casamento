@@ -1,11 +1,20 @@
 <nav class="menu" id="top">
   <ul class="page_nav">
+    {% if page.lang == "pt" %}
     <li class="title"><span>menu</span></li>
     <li class="intro"><a href="index.html">intro</a></li>
     <li class="convite"><a href="#">convite</a></li>
     <li class="gifts"><a href="lista-de-presentes.html">Lista de presente</a></li>
     <li class="agenda"><a href="agenda.html">Agenda</a></li>
     <li class="festival"><a href="infos.html">Turismo</a></li>
+    {% else %}
+    <li class="title"><span>menu</span></li>
+    <li class="intro"><a href="index.html">intro</a></li>
+    <li class="convite"><a href="#">invitation</a></li>
+    <li class="gifts"><a href="lista-de-presentes.html">Gifts</a></li>
+    <li class="agenda"><a href="agenda.html">Agenda</a></li>
+    <li class="festival"><a href="infos.html">Tourism</a></li>
+    {% endif %}
   </ul>
   <ul class="lang_nav closed">
     <li class="title"><span class="selected">Language</span></li>
